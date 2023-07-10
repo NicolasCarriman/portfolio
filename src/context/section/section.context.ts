@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction, createContext, useContext } from "react";
 
 export type section = | 'Proyectos'
-  | 'Tecnologias'
+  | 'Tecnologías'
   | 'Home'
   | 'Contacto'
   | 'Perfil';
