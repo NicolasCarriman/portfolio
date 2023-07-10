@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.dee48bf3.css",
-    "main.js": "/portfolio/static/js/main.039273c0.js",
+    "main.css": "/portfolio/static/css/main.785a5de0.css",
+    "main.js": "/portfolio/static/js/main.ce310933.js",
     "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/lerna.svg": "/portfolio/static/media/lerna.1a57878d71c773ab0c88d2cf1362b358.svg",
     "static/media/task2.png": "/portfolio/static/media/task2.98d4322741966f141299.png",
-    "static/media/NicolasCarrimanFrontend.pdf": "/portfolio/static/media/NicolasCarrimanFrontend.2d159e13c3f5c9ea4410.pdf",
     "static/media/task1.png": "/portfolio/static/media/task1.fa798e4cfe761c50db46.png",
     "static/media/traveler1.png": "/portfolio/static/media/traveler1.2b32872e5cee1815c565.png",
+    "static/media/NicolasCarrimanFrontend.pdf": "/portfolio/static/media/NicolasCarrimanFrontend.05cdc5417f5e66053025.pdf",
     "static/media/traveler2.png": "/portfolio/static/media/traveler2.61f9147cd5a1081aaaf1.png",
     "static/media/jest.svg": "/portfolio/static/media/jest.1ba09f96f00b224697295e3a7d351dfc.svg",
     "static/media/axios.svg": "/portfolio/static/media/axios.ee17ffdf661d2d72cdf2a68327202a1f.svg",
@@ -24,12 +24,12 @@
     "static/media/materialui.svg": "/portfolio/static/media/materialui.fd510ed8518b192069590b04e2e6348a.svg",
     "static/media/gmail.svg": "/portfolio/static/media/gmail.fe27c7a0c76c4a743c1bba27f8781659.svg",
     "static/media/linkedin.svg": "/portfolio/static/media/linkedin.27a3f479ca1bbb0ceef19e395081fb94.svg",
-    "main.dee48bf3.css.map": "/portfolio/static/css/main.dee48bf3.css.map",
-    "main.039273c0.js.map": "/portfolio/static/js/main.039273c0.js.map",
+    "main.785a5de0.css.map": "/portfolio/static/css/main.785a5de0.css.map",
+    "main.ce310933.js.map": "/portfolio/static/js/main.ce310933.js.map",
     "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.dee48bf3.css",
-    "static/js/main.039273c0.js"
+    "static/css/main.785a5de0.css",
+    "static/js/main.ce310933.js"
   ]
 }
