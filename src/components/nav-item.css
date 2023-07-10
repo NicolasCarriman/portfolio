@@ -1,0 +1,15 @@
+.nav-item {
+  cursor: pointer;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 1rem;
+  writing-mode: tb;
+  font-weight: 300;
+  text-transform: uppercase;
+  transition: all 0.5s;
+  list-style: none;
+}
+
+.selected {
+  border-left: solid 1px;
+  border-color: white;
+}

@@ -1,0 +1,38 @@
+.project-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.project-section {
+  overflow: hidden;
+  width: 53.2vw;
+  height: 60vh;
+  display: flex;
+  justify-content: start;
+  padding-left: 2rem;
+  align-items: center;
+}
+
+.project-slider {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 480px)  {
+  .project-content {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  
+  .project-section {
+    height: 81vh;
+    padding: 0;
+    width: 76vw;
+  }
+}

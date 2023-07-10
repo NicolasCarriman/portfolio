@@ -1,0 +1,46 @@
+.welcome-container {
+  height: calc(100vh);
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s ease;
+  background-color: #909090;
+}
+
+.gray {
+  box-shadow: inset 0px 0px rgb(129 129 129);
+}
+
+.black {
+  box-shadow: inset 0px -1000px #0c0c0c;
+}
+
+.welcome-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.welcome-content span {
+  color: #0c0c0c;
+  font-weight: 700;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-family: 'Noto Sans', sans-serif;
+  animation-name: letter-animation;
+  animation-duration: 0.5s;
+  animation-delay:  calc(0.1s * var(--index));
+  transform: translateY(40px);
+  animation-fill-mode: forwards;
+}
+
+@keyframes letter-animation {
+  from {
+    transform: translateY(40px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}

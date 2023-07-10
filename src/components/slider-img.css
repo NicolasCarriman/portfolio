@@ -1,0 +1,13 @@
+.image-container {
+  display: flex;
+  overflow: hidden;
+  width: 24vw;
+  height: 46vh;
+  border-radius: 13px 0px 0px 12px;
+}
+
+img {
+  object-fit: cover;
+  left: -64px;
+  position: relative;
+}

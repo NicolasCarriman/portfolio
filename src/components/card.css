@@ -1,0 +1,149 @@
+.card-container {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  background: #11171c;
+  border-radius: 12px;
+  padding: 12px;
+  gap: 12px;
+  transition: all 0.25s ease-in-out;
+  box-shadow: inset 1px 1px #282828, inset -1px 0px #282828, 1px 1px 20px 1px #0000009e;
+}
+
+.card-container:hover {
+  box-shadow: inset 1px 1px #282828, inset -1px 0px #282828, 1px 1px 20px 1px #8183d19e;
+}
+
+.card-content {
+  display: flex;
+  min-width: 26vw;
+  width: 50%;
+  overflow: hidden;
+  max-width: 26vw;
+}
+
+.card-slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.image-container {
+  display: flex;
+  overflow: hidden;
+  width: 24vw;
+  height: 48vh;
+  border-radius: 13px 0px 0px 12px;
+}
+
+.card-section {
+  display: flex;
+  flex-direction: column;
+  min-width: 26vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-mask {
+  height: 48vh;
+  width: 100%;
+  border-radius: 12px;
+  background-color: rgb(11, 15, 20);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 1px 1px #282828, inset -1px 0px #282828;
+}
+
+.mouse-animation {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  animation: fade 2s infinite;
+}
+
+.card-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 12px;
+  gap: 1rem;
+}
+
+.card-links {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+  font-size: 1.2rem;
+  color: blue;
+}
+
+.card-technologies {
+  display: flex;
+  flex-direction: row;
+  align-items: self-end;
+  justify-content: center;
+  gap: 1rem;
+}
+
+h1 {
+  font-size: 2.2rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+@keyframes fade {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card-container {
+    margin-left: 1vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 66vw;
+    height: 72vh;
+  }
+
+  .image-container {
+    min-width: 100%;
+    max-height: 30%;
+    border-radius: 12px !important;
+  }
+
+  .image-container img {
+    left: -24px
+  }
+
+  .card-content {
+    min-width: 64vw;
+  }
+
+  .card-section {
+    min-width: 64vw;
+  }
+
+  .section-mask {
+    width: 64vw;
+  }
+
+  .card-description {
+    max-width: 66vw;
+    gap: 0;
+  }
+
+  .card-technologies {
+    overflow: auto;
+    max-width: 57vw;
+  }
+}

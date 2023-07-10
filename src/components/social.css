@@ -1,0 +1,61 @@
+.social-content {
+  position: relative;
+  border-radius: 12px;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16%;
+  box-shadow: 1px 1px 20px black;
+  overflow: hidden;
+  transition: all 0.4s ease-in;
+}
+
+.contact-mask {
+  transition: all .75s;
+  background: linear-gradient(302deg, black, #212e3f);
+  animation: gradient-rotation 5s infinite linear;
+  height: 80vh;
+  width: 80vw;
+  position: absolute;
+  z-index: -1;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-content:hover {
+  width: 24vw;
+}
+
+a {
+  color: #4db1d9;
+  font-weight: 500;
+}
+
+
+@keyframes gradient-rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  .social-content {
+    height: 20vh;
+    width: 60%;
+  }
+  .social-content:hover {
+    width:100%;
+    height: 20vh;
+  }
+}

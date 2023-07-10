@@ -1,0 +1,89 @@
+.cv-description {
+  display: flex;
+  opacity: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 40vw;
+  margin-top: 2rem;
+  font-family: 'Noto Sans', sans-serif;
+  animation: appear 1s ease forwards;
+  animation-delay: 1s;
+}
+
+.cv-hidden {
+  display: none;
+}
+
+.cv-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+  height: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: -6vh;
+}
+
+.cv-downuload {
+  background-color: #11171c;
+  border-radius: 8px;
+  padding: 1em;
+  box-shadow: 1px 1px 13px black;
+  animation: simply-appear 1s ease forwards;
+  animation-delay: 1s;
+  opacity: 0;
+  font-size: 1.2rem;
+}
+
+@keyframes appear {
+  0% {
+    transform: translateY(16vh);
+    opacity: 0;
+  }
+  90% {
+    transform: translateY(-1vh);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(0vh);
+    opacity: 1;
+  }
+}
+
+@keyframes simply-appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .cv-content {
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+
+  .cv-description {
+    font-weight: lighter;
+    min-width: 76vw;
+    text-align: center;
+  }
+
+  .cv-description p {
+    font-size: 0.82rem;
+  }
+
+  .cv-downuload {
+    padding: 0.5em;
+    display: flex;
+  }
+
+  .cv-downuload a {
+    font-size: 1.3rem;
+  }
+}

@@ -1,0 +1,80 @@
+.name-content {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: start;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+}
+
+.name-content p {
+  margin: 0;
+  letter-spacing: 1rem;
+  position: absolute;
+  font-weight: bold;
+  font-size: 2.2rem;
+  background: #0B0F14;
+  text-transform: uppercase;
+}
+
+.name-content p:first-child {
+  color: white;
+  z-index: 200;
+  transform: translateY(-2.7rem);
+}
+
+.active p:first-child {
+  animation-name: slideFirstChild;
+  animation-duration: 1s;
+  animation-iteration-count: linear;
+}
+
+.name-content p:nth-child(2) {
+  color: darkgrey;
+  opacity: 1;
+  transform: translateY(-1.3rem);
+  z-index: 100;
+}
+
+.active p:nth-child(2) {
+  opacity: 0;
+  animation-name: slideSecondChild;
+  animation-delay: 0.2s;
+  animation-duration: 1s;
+  animation-iteration-count: linear;
+  animation-fill-mode: forwards;
+}
+
+.name-content p:last-child {
+  color: #404040;
+  margin-top: 10rem;
+}
+
+@keyframes slideFirstChild {
+  from {
+    transform: translateY(0rem);
+  }
+
+  to {
+    transform: translateY(-2.7rem);
+  }
+}
+
+@keyframes slideSecondChild {
+  from {
+    transform: translateY(0rem);
+  }
+
+  to {
+    transform: translateY(-1.3rem);
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .name-content p {
+    font-size: 1rem;
+  }
+}

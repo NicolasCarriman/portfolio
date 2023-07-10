@@ -1,0 +1,38 @@
+.main-title {
+  font-weight: 400;
+  font-family: 'serrat', sans-serif;
+  font-size: 4rem;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+}
+
+h1::selection, h2::selection{
+  background: yellow;
+  color: black;
+}
+
+h1, h2 {
+  text-align: center;
+  color: white;
+}
+
+p {
+  color: white
+}
+
+.home-content {
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+@media screen and (max-width: 480px) {
+  .main-title {
+  font-size: 1rem;
+ }
+}
