@@ -8,13 +8,17 @@ function Main() {
 
   document.body.style.backgroundColor = '#0B0F14';
   return (
+    <>
       <main className='main-content'>
         <Header />
         <section className='section-container'>
           <Display />
-          <SectionName/>
         </section>
       </main>
+      <footer className='footer-content'>
+        <SectionName/>
+      </footer>
+    </>
   )
 }
 

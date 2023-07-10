@@ -6,10 +6,17 @@
   animation: appear;
   animation-fill-mode: forwards;
   animation-duration: 2.5s;
+  max-height: 89vh;
 }
 
 .section-container {
   height: 100vh;
+}
+
+.footer-content {
+  height: 11vh;
+  display: flex;
+  justify-content: start;
 }
 
 @keyframes appear {

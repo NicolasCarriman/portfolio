@@ -1,5 +1,5 @@
 .name-content {
-  position: fixed;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: end;
