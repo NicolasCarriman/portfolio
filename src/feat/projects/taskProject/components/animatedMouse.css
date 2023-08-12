@@ -1,0 +1,21 @@
+.mouse-container {
+  position: absolute;
+  animation: move 1.2s infinite ease-in-out;
+}
+
+.mouse-animation {
+  filter: drop-shadow(1px 1px 3px white);
+  color: black;
+
+}
+
+
+@keyframes move {
+
+  0% {
+    transform: translate(-600px, 600px);
+  }
+  100% {
+    transform: translate(-200px, 200px);
+  }
+}

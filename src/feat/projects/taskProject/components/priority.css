@@ -1,0 +1,18 @@
+.high-priority {
+  color: #c61111;
+  align-items: center;
+  display: flex;
+}
+
+.low-priority {
+  color: #24c61b;
+  align-items: center;
+  display: flex;
+}
+
+.medium-priority {
+  color: #ffe03c;
+  text-shadow: 3px 1px 0px #ff7600, 8px 1px 6px black;
+  align-items: center;
+  display: flex;
+}

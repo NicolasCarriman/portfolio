@@ -13,3 +13,10 @@
   border-left: solid 1px;
   border-color: white;
 }
+
+
+@media screen and (max-width: 480px) {
+  .nav-item {
+    writing-mode: horizontal-tb;
+  }
+}

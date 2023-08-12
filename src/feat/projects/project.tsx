@@ -1,9 +1,9 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import './project.css';
 import Container from '../../components/container';
 import Card from '../../components/card';
 import Selector, { selector } from '../../components/selector';
-import { cardData } from '../../utilities/cardData';
+import { projectData } from '../../utilities/cardData';
 
 const elements: selector[] = [
   {
@@ -17,10 +17,11 @@ const elements: selector[] = [
 ]
 
 export default function Project() {
-  const [ cards, setCards ] = useState(elements);
+  const [cards, setCards] = useState(elements);
+  const [isMobile, setIsMobile] = useState(false);
   const sliderRef = useRef<HTMLDivElement>(null);
 
-  
+
   const getElements = () => {
     const el = sliderRef.current;
     if (!el) return;
@@ -53,32 +54,50 @@ export default function Project() {
 
   const handleSelect = (el: string) => {
     const updatedSelected = cards.map((c) => {
-      if(c.el === el) {
+      if (c.el === el) {
         return { ...c, selected: true };
       } else return { ...c, selected: false };
     });
     const selectedIndex = updatedSelected.findIndex((c) => c.selected === true);
 
-    if(selectedIndex < cards.length && selectedIndex !== 0) {
+    if (selectedIndex < cards.length && selectedIndex !== 0) {
       next();
     } else prev();
     setCards(updatedSelected);
   }
 
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(max-width: 480px)');
+
+    const actualizarEsMobile = (event: any) => {
+      setIsMobile(event.matches);
+    };
+    actualizarEsMobile(mediaQuery);
+
+    mediaQuery.addListener(actualizarEsMobile);
+
+    return () => {
+      mediaQuery.removeListener(actualizarEsMobile);
+    };
+  }, []);
+
   return (
     <Container>
-          <div className='project-content'>
-            <div className='project-section'>
-              <div ref={sliderRef} className='project-slider'>
-                {
-                  cardData.map((c, i) => (
-                    <Card data={c} key={i} />
-                  ))
-                }
-              </div>
-            </div>
-            <Selector setElements={handleSelect} elements={cards}/>
+      <div className='project-content'>
+        <div className='project-section'>
+          <div ref={sliderRef} className='project-slider'>
+            {
+                projectData.map((c, i) => (
+                  <Card data={c} key={i} />
+                ))
+            }
           </div>
-    </Container>
+        </div>
+        {
+          !isMobile &&
+          <Selector setElements={handleSelect} elements={cards} />
+        }
+      </div>
+    </Container >
   )
 };

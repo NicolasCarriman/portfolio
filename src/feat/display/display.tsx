@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useRef, useState } from 'react'
-import Project from '../projects/project';
+import Project from '../projects/newProject';
 import { SectionContext } from '../../context/section/section.context';
 import Home from '../home/home';
 import './display.css';

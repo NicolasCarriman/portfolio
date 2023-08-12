@@ -60,8 +60,6 @@ function Social({ type }: Props) {
     gmail: <LinkComponent href={'nicolascarriman045@gmail.com'} label={'Email'} />
   }
 
-
-
   return (
     <div
       className='social-content'

@@ -33,3 +33,10 @@
   margin-top: 25%;
   height: 80%;
 }
+
+
+@media screen and (max-width: 480px) {
+  .header-contnainer {
+    display: none;
+  }
+}

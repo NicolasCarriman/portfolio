@@ -1,0 +1,16 @@
+.category-container {
+  display: flex;
+  max-height: 10vh;
+}
+
+.category-content {
+  box-shadow: 6px -5px 8px 4px #113653, 10px -4px 19px black;
+  border-radius: 12px;
+  padding: 2rem;
+  width: 100%;
+  background: #17354e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}

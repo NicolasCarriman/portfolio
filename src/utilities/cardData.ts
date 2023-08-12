@@ -4,7 +4,7 @@ import task2 from '../assets/portfolio/task2.png';
 import travel1 from '../assets/portfolio/traveler1.png';
 import travel2 from '../assets/portfolio/traveler2.png';
 
-export const cardData: IProject[] = [
+export const projectData: IProject[] = [
   {
     tittle: 'T-Task',
     imgs: [

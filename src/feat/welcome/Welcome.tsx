@@ -32,7 +32,7 @@ function Wellcome() {
             return (
               <span
                 onAnimationEnd={() => index === e.length - 1 && changeColor()}
-                key={e}
+                key={e.concat(index.toString())}
                 style={{
                   '--index': index + 1
                 }}
