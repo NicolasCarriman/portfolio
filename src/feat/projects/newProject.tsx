@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Container from '../../components/container';
 import './project.css';
 import TaskList from './taskProject/taskList';
 import AnimatedMouse from './taskProject/components/animatedMouse';
+import TaskInteractiveProject from './taskProject/taskList';
 
 function Project() {
+  const [showMouseEffect, setShowMouseEffect] = useState(true);
   return (
     <Container>
       <div className='project-content'>
@@ -19,9 +21,11 @@ function Project() {
         <div
           className='project-element'
         >
-          <TaskList />
+          <TaskInteractiveProject hideMouse={() => setShowMouseEffect(false)} />
         </div>
-        <AnimatedMouse />
+        {
+          showMouseEffect && <AnimatedMouse />
+        }
       </div>
     </Container >
   )

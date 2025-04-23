@@ -5,11 +5,16 @@ import TaskItem from './components/taskItem';
 
 const list = ['t-1', 't-2', 't-3', 't-4'];
 
-function TaskList() {
+interface Props {
+  hideMouse: () => void;
+}
+
+function TaskInteractiveProject({ hideMouse }: Props) {
   const [hoverId, setHoverId] = useState('');
 
   const handleHover = (id: string) => {
     setHoverId(id)
+    hideMouse();
   }
 
   const handleOut = () => {
@@ -22,7 +27,7 @@ function TaskList() {
     transform: 'rotate3d(2, 9, 1, 45deg) scale(1.05) translate(-3vw, 1.2vw)',
     transition: 'transform 0.5s cubic-bezier(0.01, 0.68, 0.58, 1) 0s',
   };
-  
+
   const notHoverStyle = {
     filter: 'blur(2px)',
   };
@@ -38,7 +43,7 @@ function TaskList() {
             onMouseEnter={() => handleHover(item)}
             onMouseLeave={handleOut}
           >
-            <TaskItem style={hoverId !== '' && hoverId !== item ? notHoverStyle : {}}/>
+            <TaskItem style={hoverId !== '' && hoverId !== item ? notHoverStyle : {}} />
           </ThreeDBox>
         ))
       }
@@ -46,4 +51,4 @@ function TaskList() {
   )
 }
 
-export default TaskList
+export default TaskInteractiveProject;
